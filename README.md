@@ -40,7 +40,7 @@
 }
 ```
 
-⚙️ 1. ฝั่งฮาร์ดแวร์ (ESP_Code)
+##⚙️ 1. ฝั่งฮาร์ดแวร์ (ESP_Code)
 ควบคุมการอ่านค่าเซนเซอร์ ตรวจสอบ OTP จาก Keypad และสั่งงานกลอนประตูไฟฟ้า
 
 🛠️ การติดตั้ง
@@ -55,7 +55,7 @@ C++
 #define WIFI_PASSWORD "YOUR_WIFI_PASSWORD"
 #define FIREBASE_HOST "YOUR_FIREBASE_URL"
 #define FIREBASE_AUTH "YOUR_DATABASE_SECRET"
-🌐 2. ฝั่ง Web Dashboard (ebox-frontend / ebox-backend)
+##🌐 2. ฝั่ง Web Dashboard (ebox-frontend / ebox-backend)
 ระบบหน้าเว็บสำหรับตรวจสอบสถานะเซนเซอร์แบบเรียลไทม์ และทำรายการฝากพัสดุ
 
 🛠️ การติดตั้งและการรันระบบ
@@ -73,7 +73,7 @@ FIREBASE_AUTH_DOMAIN=your_project_id.firebaseapp.com
 FIREBASE_DATABASE_URL=https://your_project_id.firebaseio.com
 รันคำสั่ง npm start หรือ npm run dev (หรือใช้ Live Server เปิดไฟล์ index.html)
 
-💬 3. ฝั่ง Middleware (Google Apps Script)
+##💬 3. ฝั่ง Middleware (Google Apps Script)
 รับ Trigger จากหน้าเว็บหรือ Firebase เพื่อสร้างแจ้งเตือนและยิง API เข้า LINE ของผู้พักอาศัย
 
 🛠️ การติดตั้ง
