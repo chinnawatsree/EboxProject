@@ -5,7 +5,7 @@
 ## 👥 ผู้จัดทำ (Created By)
 * **Chinnawat Sreesangjun** (Student Code: [ุ650921])
 * Computer Science Curriculum, Faculty of Science and Technology, Huachiew Chalermprakiet University
-* Project Advisor: ** Premrat Poonsawat**
+* Project Advisor: **Premrat Poonsawat**
 
 ---
 
