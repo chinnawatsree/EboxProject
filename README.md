@@ -28,15 +28,15 @@
 {
   "lockers": {
     "L01": {
-      "status": "available",      // สถานะการทำรายการ (available / occupied)
-      "otp": "none",              // รหัสผ่าน 4 หลัก (เก็บค่าชั่วคราว)
-      "owner_room": "none",       // หมายเลขห้องผู้รับพัสดุ
-      "door_open": false,         // สถานะเซนเซอร์ประตู (true = เปิด / false = ปิด)
-      "has_parcel": false,        // สถานะเซนเซอร์ระยะทาง (true = มีของ / false = ไม่มีของ)
-      "command": "none"           // คำสั่งบังคับจากระยะไกล เช่น "open_door", "force_reset"
+      "status": "available",
+      "otp": "none",
+      "owner_room": "none",
+      "door_open": false,
+      "has_parcel": false,
+      "command": "none"
     }
   },
-  "logs": { ... }                 // โหนดเก็บบันทึกประวัติการใช้งานย้อนหลัง (ถ้ามี)
+  "logs": { ... }
 }
 ⚙️ 1. ฝั่งฮาร์ดแวร์ (ESP_Code)
 ควบคุมการอ่านค่าเซนเซอร์ ตรวจสอบ OTP จาก Keypad และสั่งงานกลอนประตูไฟฟ้า
@@ -87,7 +87,5 @@ const LINE_ACCESS_TOKEN = 'YOUR_LINE_CHANNEL_ACCESS_TOKEN';
 
 ⚠️ ข้อควรระวังด้านความปลอดภัย (Security Guidelines)
 ข้อมูล WIFI_PASSWORD, FIREBASE_AUTH, และ LINE_ACCESS_TOKEN เป็นความลับขั้นสูงสุด ห้าม Push ขึ้น GitHub เด็ดขาด
-
-ตรวจสอบให้แน่ใจว่าไฟล์ความลับทั้งหมด รวมถึงโฟลเดอร์ระบบเช่น node_modules/ ถูกระบุไว้ในไฟล์ .gitignore เรียบร้อยแล้ว
 
 ตรวจสอบให้แน่ใจว่าไฟล์ความลับทั้งหมด รวมถึงโฟลเดอร์ระบบเช่น node_modules/ ถูกระบุไว้ในไฟล์ .gitignore เรียบร้อยแล้ว
