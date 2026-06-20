@@ -40,54 +40,64 @@
 }
 ```
 
+---
+
 ## ⚙️ 1. ฝั่งฮาร์ดแวร์ (ESP_Code)
 ควบคุมการอ่านค่าเซนเซอร์ ตรวจสอบ OTP จาก Keypad และสั่งงานกลอนประตูไฟฟ้า
 
-🛠️ การติดตั้ง
-ใช้โปรแกรม Arduino IDE พร้อมติดตั้ง Board Manager: esp32
+### 🛠️ การติดตั้ง
+1. ใช้โปรแกรม Arduino IDE พร้อมติดตั้ง Board Manager: `esp32`
+2. ติดตั้งไลบรารี: `Firebase ESP32 Client`, `Keypad`, `LiquidCrystal_I2C`
+3. ก่อนอัปโหลดโค้ด ให้สร้างไฟล์ `config.h` หรือแก้ไขตัวแปรส่วนหัวดังนี้:
 
-ติดตั้งไลบรารี: Firebase ESP32 Client, Keypad, LiquidCrystal_I2C
-
-ก่อนอัปโหลดโค้ด ให้สร้างไฟล์ config.h หรือแก้ไขตัวแปรส่วนหัวดังนี้:
-
-C++
+```cpp
 #define WIFI_SSID "YOUR_WIFI_SSID"
 #define WIFI_PASSWORD "YOUR_WIFI_PASSWORD"
 #define FIREBASE_HOST "YOUR_FIREBASE_URL"
 #define FIREBASE_AUTH "YOUR_DATABASE_SECRET"
+```
+
+---
+
 ## 🌐 2. ฝั่ง Web Dashboard (ebox-frontend / ebox-backend)
 ระบบหน้าเว็บสำหรับตรวจสอบสถานะเซนเซอร์แบบเรียลไทม์ และทำรายการฝากพัสดุ
 
-🛠️ การติดตั้งและการรันระบบ
-เปิด Terminal แล้วเข้าไปที่โฟลเดอร์ ebox-frontend หรือ ebox-backend
+### 🛠️ การติดตั้งและการรันระบบ
+1. เปิด Terminal แล้วเข้าไปที่โฟลเดอร์ `ebox-frontend` หรือ `ebox-backend`
+2. หากมีการใช้ Node.js ให้รันคำสั่ง:
 
-หากมีการใช้ Node.js ให้รันคำสั่ง:
-
-Bash
+```bash
 npm install
-สร้างไฟล์ .env เพื่อเก็บค่าคอนฟิกของ Firebase (ห้ามนำไฟล์นี้ขึ้น Git):
+```
 
-Code snippet
+3. สร้างไฟล์ `.env` เพื่อเก็บค่าคอนฟิกของ Firebase (ห้ามนำไฟล์นี้ขึ้น Git):
+
+```env
 FIREBASE_API_KEY=your_api_key
 FIREBASE_AUTH_DOMAIN=your_project_id.firebaseapp.com
 FIREBASE_DATABASE_URL=https://your_project_id.firebaseio.com
-รันคำสั่ง npm start หรือ npm run dev (หรือใช้ Live Server เปิดไฟล์ index.html)
+```
+
+4. รันคำสั่ง `npm start` หรือ `npm run dev` (หรือใช้ Live Server เปิดไฟล์ `index.html`)
+
+---
 
 ## 💬 3. ฝั่ง Middleware (Google Apps Script)
 รับ Trigger จากหน้าเว็บหรือ Firebase เพื่อสร้างแจ้งเตือนและยิง API เข้า LINE ของผู้พักอาศัย
 
-🛠️ การติดตั้ง
-คัดลอกโค้ดจากไฟล์ในโฟลเดอร์ GAS/
+### 🛠️ การติดตั้ง
+1. คัดลอกโค้ดจากไฟล์ในโฟลเดอร์ `GAS/`
+2. นำไปสร้างโปรเจกต์ใหม่บน Google Apps Script
+3. กำหนดค่าตัวแปรในโค้ด:
 
-นำไปสร้างโปรเจกต์ใหม่บน Google Apps Script
-
-กำหนดค่าตัวแปรในโค้ด:
-
-JavaScript
+```javascript
 const LINE_ACCESS_TOKEN = 'YOUR_LINE_CHANNEL_ACCESS_TOKEN';
-เลือก Deploy -> Web app กำหนดสิทธิ์เป็น Anyone และนำ URL ไปใช้งาน
+```
 
-⚠️ ข้อควรระวังด้านความปลอดภัย (Security Guidelines)
-ข้อมูล WIFI_PASSWORD, FIREBASE_AUTH, และ LINE_ACCESS_TOKEN เป็นความลับขั้นสูงสุด ห้าม Push ขึ้น GitHub เด็ดขาด
+4. เลือก **Deploy -> Web app** กำหนดสิทธิ์เป็น Anyone และนำ URL ไปใช้งาน
 
-ตรวจสอบให้แน่ใจว่าไฟล์ความลับทั้งหมด รวมถึงโฟลเดอร์ระบบเช่น node_modules/ ถูกระบุไว้ในไฟล์ .gitignore เรียบร้อยแล้ว
+---
+
+## ⚠️ ข้อควรระวังด้านความปลอดภัย (Security Guidelines)
+* 🔴 **ห้าม Push ข้อมูลความลับขึ้น GitHub เด็ดขาด:** ข้อมูล `WIFI_PASSWORD`, `FIREBASE_AUTH`, และ `LINE_ACCESS_TOKEN` เป็นความลับขั้นสูงสุด
+* 🛡️ ตรวจสอบให้แน่ใจว่าไฟล์ความลับทั้งหมด รวมถึงโฟลเดอร์ระบบเช่น `node_modules/` ถูกระบุไว้ในไฟล์ `.gitignore` เรียบร้อยแล้ว
