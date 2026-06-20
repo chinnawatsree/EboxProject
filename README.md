@@ -89,3 +89,5 @@ const LINE_ACCESS_TOKEN = 'YOUR_LINE_CHANNEL_ACCESS_TOKEN';
 ข้อมูล WIFI_PASSWORD, FIREBASE_AUTH, และ LINE_ACCESS_TOKEN เป็นความลับขั้นสูงสุด ห้าม Push ขึ้น GitHub เด็ดขาด
 
 ตรวจสอบให้แน่ใจว่าไฟล์ความลับทั้งหมด รวมถึงโฟลเดอร์ระบบเช่น node_modules/ ถูกระบุไว้ในไฟล์ .gitignore เรียบร้อยแล้ว
+
+ตรวจสอบให้แน่ใจว่าไฟล์ความลับทั้งหมด รวมถึงโฟลเดอร์ระบบเช่น node_modules/ ถูกระบุไว้ในไฟล์ .gitignore เรียบร้อยแล้ว
