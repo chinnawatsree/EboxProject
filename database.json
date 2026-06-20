@@ -1,0 +1,50 @@
+{
+  "admins": {
+    "admin_01": {
+      "ad_name": "ผู้ดูแลระบบ",
+      "ad_password": "password123",
+      "ad_username": "admin"
+    }
+  },
+  "lockers": {
+    "L01": {
+      "command": "",
+      "door_open": false,
+      "otp": "",
+      "owner_room": "",
+      "size": "M",
+      "status": "available"
+    },
+    "L02": {
+      "command": "",
+      "door_open": false,
+      "otp": "",
+      "owner_room": "",
+      "size": "L",
+      "status": "available"
+    },
+    "L03": {
+      "command": "",
+      "door_open": false,
+      "otp": "",
+      "owner_room": "",
+      "size": "L",
+      "status": "available"
+    }
+  },
+  "logs": {
+    "-SystemRecoveryLog01": {
+      "detail": "กู้คืนโครงสร้างฐานข้อมูลเริ่มต้น",
+      "locker": "-",
+      "status": "Success",
+      "time": "7/5/2569 15:40:00",
+      "type": "System Init",
+      "user": "System Admin"
+    }
+  },
+  "users": {
+    "101": {
+      "line_id": ""
+    }
+  }
+}
