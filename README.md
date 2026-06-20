@@ -3,7 +3,7 @@
 **E-BOX** เป็นระบบตู้พัสดุอัจฉริยะสำหรับหอพักขนาด SME ที่พัฒนาขึ้นเพื่อช่วยเหลือผู้ดูแลและผู้พักอาศัยในการบริหารจัดการพัสดุอย่างมีประสิทธิภาพ โดยประยุกต์ใช้เทคโนโลยีอินเทอร์เน็ตของสรรพสิ่ง (IoT) ร่วมกับระบบคลาวด์และแพลตฟอร์มการสื่อสาร (ESP32, Firebase Realtime Database, Google Apps Script และ LINE Messaging API) เพื่อให้การรับฝากพัสดุมีความปลอดภัย สะดวกสบาย แจ้งเตือนรหัส OTP และตรวจสอบสถานะได้แบบเรียลไทม์ 24 ชั่วโมง
 
 ## 👥 ผู้จัดทำ (Created By)
-* **Chinnawat Sreesangjun** (Student Code: [ใส่รหัสนักศึกษาของคุณชิน])
+* **Chinnawat Sreesangjun** (Student Code: [ุ650921])
 * Computer Science Curriculum, Faculty of Science and Technology, Huachiew Chalermprakiet University
 * Project Advisor: **Ajarn Premrat Poonsawat**
 
